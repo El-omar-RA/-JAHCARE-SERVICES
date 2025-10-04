@@ -1,27 +1,40 @@
 # JAHCARE SERVICES Website
 
-This is a simple, static website designed for GitHub Pages. It follows a layout similar in structure to Julyardi's site (hero, sections, contact), but uses original code and design.
+A fully responsive, accessible single-page site for JAHCARE SERVICES. The design draws inspiration from the flow of julyardi.org.au while keeping original content, visual language, and code. It is built with plain HTML, CSS, and vanilla JavaScript so it can be hosted directly on GitHub Pages.
 
-## How to publish on GitHub Pages
+## Project structure
 
-1. Create a new repository on GitHub (for example, `jahcare-website`).  
-2. Upload **index.html**, the **css/**, **js/** and **assets/** folders.  
-3. Go to **Settings → Pages**.  
-4. Under **Build and deployment**, set **Source = Deploy from a branch**, then choose your default branch (usually `main`) and **/ (root)**.  
-5. Save. Your site will appear at:  
-   `https://<your-username>.github.io/jahcare-website/`
+- `index.html` – One-page layout with hero, mission, workshops, services, program, philanthropy, funding, team, and contact sections.
+- `css/styles.css` – Mobile-first styles, custom utility classes, and component rules (sticky nav, cards, timeline, form, etc.).
+- `js/main.js` – Burger menu toggle, smooth scrolling with sticky-header offset, prefers-reduced-motion support, and automatic copyright year.
+- `assets/logo.svg` – Gradient SVG logo placeholder sized for nav/SEO usage.
 
-### Editing in VS Code
-- Open this folder in VS Code.
-- Edit content inside `index.html` (text) and `css/styles.css` (styles).
-- Use the built-in **Live Server** extension for preview.
+## Work locally
+
+1. Clone or download this folder.
+2. Open `index.html` directly in a browser for a quick look, or start a lightweight server (recommended for testing relative paths):
+   ```bash
+   python3 -m http.server
+   ```
+3. Edit text/imagery in `index.html`, adjust styles in `css/styles.css`, and tweak interaction in `js/main.js`.
+
+## Deploy on GitHub Pages (quick steps)
+
+1. Create a GitHub repository (e.g., `jahcare-website`).
+2. Add the files/folders from this project (`index.html`, `css/`, `js/`, `assets/`, `README.md`).
+3. Push to GitHub and go to **Settings → Pages**.
+4. Under **Build and deployment**, set **Source** to **Deploy from a branch**, then choose your default branch (such as `main`) and the `/ (root)` folder.
+5. Click **Save**. Pages will publish at `https://<YOUR-USERNAME>.github.io/jahcare-website/` once the build finishes.
 
 ### Custom domain (optional)
-You can add your own domain under **Settings → Pages** and enable HTTPS.
 
----
+- In **Settings → Pages**, add your domain under **Custom domain** and follow the DNS instructions (create the required `A`/`AAAA` records or `CNAME`).
+- Commit a `CNAME` file at the repository root containing only your domain name.
+- After DNS propagates, enforce HTTPS in the same Pages settings panel.
 
-**Contact details to update**
-- Phone numbers: `0421 507 762` and `0498 560 998`
-- Email: `jahcareservices@gmail.com`
-- ABN: `354 6470 0601`
+## Notes for updates
+
+- Keep internal links relative so the site works from a subpath on GitHub Pages.
+- Fonts are loaded from Google Fonts (`DM Serif Display` and `Inter`); remove or replace the `<link>` tags if self-hosting.
+- Images use `loading="lazy"` and interactive elements include focus styles for accessibility.
+- Update contact details or program information directly in `index.html` as offerings evolve.
