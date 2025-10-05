@@ -1,16 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" role="img" aria-labelledby="title desc">
-  <title id="title">JAHCARE SERVICES</title>
-  <desc id="desc">Logo placeholder for JAHCARE SERVICES</desc>
-  <defs>
-    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0%" stop-color="#1F5C53"/>
-      <stop offset="38.2%" stop-color="#A8C4A9"/>
-      <stop offset="61.8%" stop-color="#E7D3AE"/>
-      <stop offset="100%" stop-color="#C8744E"/>
-    </linearGradient>
-  </defs>
-  <rect x="0" y="0" width="320" height="80" fill="url(#g)" rx="12" />
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="20" fill="white">
-    🌺 JAHCARE SERVICES
-  </text>
-</svg>
+
