@@ -1,24 +1,24 @@
-const header = document.querySelector('.header');
-const burger = document.querySelector('.burger');
-const menu = document.querySelector('#menu');
+const nav = document.querySelector('.nav');
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
 
 const closeMenu = () => {
-  menu?.classList.remove('open');
-  if (burger) {
-    burger.setAttribute('aria-expanded', 'false');
+  navLinks?.classList.remove('is-open');
+  if (navToggle) {
+    navToggle.setAttribute('aria-expanded', 'false');
   }
 };
 
 const openMenu = () => {
-  menu?.classList.add('open');
-  if (burger) {
-    burger.setAttribute('aria-expanded', 'true');
+  navLinks?.classList.add('is-open');
+  if (navToggle) {
+    navToggle.setAttribute('aria-expanded', 'true');
   }
 };
 
-if (burger && menu) {
-  burger.addEventListener('click', () => {
-    if (menu.classList.contains('open')) {
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    if (navLinks.classList.contains('is-open')) {
       closeMenu();
     } else {
       openMenu();
@@ -26,7 +26,7 @@ if (burger && menu) {
   });
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 980) {
+    if (window.innerWidth >= 768) {
       closeMenu();
     }
   });
@@ -34,32 +34,38 @@ if (burger && menu) {
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
       closeMenu();
-      burger?.focus();
+      navToggle.focus();
+    }
+  });
+
+  navLinks.addEventListener('click', (event) => {
+    if (event.target instanceof HTMLAnchorElement) {
+      closeMenu();
     }
   });
 }
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+const getScrollOffset = () => (nav?.offsetHeight ?? 0) + 8;
+
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener('click', (event) => {
     const targetId = link.getAttribute('href');
-    if (!targetId) return;
+    if (!targetId || targetId.length < 2) return;
     const targetEl = document.querySelector(targetId);
     if (!targetEl) return;
 
     event.preventDefault();
 
-    const headerOffset = (header?.offsetHeight || 0) + 12;
+    const headerOffset = getScrollOffset();
     const elementPosition = targetEl.getBoundingClientRect().top + window.scrollY;
     const offsetPosition = elementPosition - headerOffset;
 
     window.scrollTo({
       top: offsetPosition,
-      behavior: prefersReducedMotion ? 'auto' : 'smooth'
+      behavior: prefersReducedMotion ? 'auto' : 'smooth',
     });
-
-    closeMenu();
   });
 });
 

@@ -11,26 +11,32 @@
   <meta name="theme-color" content="#1F5C53">
 </head>
 <body>
-  <nav class="nav">
+  <nav class="nav" aria-label="Main">
     <div class="container">
-      <a href="/" class="brand">
-        <img src="assets/LOGO%20CW%20SOLGAN.jpg" alt="JAHCARE Services logo">
+      <a href="#top" class="brand">
+        <img src="assets/LOGO%20CW%20SOLGAN.jpg" alt="JAHCARE Services logo" loading="lazy" decoding="async">
       </a>
-      <div class="nav-links">
-        <a href="mission.html">Mission</a>
-        <a href="workshops.html">Workshops</a>  
-        <a href="team.html">Our Team</a>
-        <a href="contact.html">Contact</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="visually-hidden">Toggle navigation</span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <div class="nav-links" id="primary-nav">
+        <a href="#mission">Mission</a>
+        <a href="#workshops">Workshops</a>
+        <a href="#team">Our Team</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="container">
-      <h1>Cultural Connection through Art & Movement</h1>
-      <p class="lead">Multicultural performing arts workshops and community supports across Pilbara–Perth</p>
-      <div class="cta">
-        <a href="contact.html" class="button">Get Started</a>
+  <header class="hero" id="top">
+    <div class="container hero-content">
+      <h1>Cultural Connection through Art &amp; Movement</h1>
+      <p class="lead">Multicultural performing arts workshops and community supports across Pilbara–Perth.</p>
+      <div class="cta-group">
+        <a href="#contact" class="btn primary">Get Started</a>
       </div>
     </div>
   </header>
@@ -224,7 +230,7 @@
             <div class="avatar" data-initials="RS" aria-hidden="true"></div>
             <h3>Rina Sa&rsquo;ula</h3>
             <p class="role">Logistics Coordinator</p>
-            <p>Co-ordinates travel, transport, and workshop resources so every event runs smoothly.</p>
+            <p>Coordinates travel, transport, and workshop resources so every event runs smoothly.</p>
             <a class="connect" href="mailto:jahcareservices@gmail.com?subject=Logistics%20Support">Connect</a>
           </article>
           <article class="card team-card">
@@ -257,94 +263,19 @@
           <form action="mailto:jahcareservices@gmail.com" method="post" enctype="text/plain">
             <div class="form-field">
               <label for="name">Name</label>
-              <input id="name" name="Name" type="text" required />
+              <input id="name" name="Name" type="text" required>
             </div>
             <div class="form-field">
               <label for="email">Email</label>
-              <input id="email" name="Email" type="email" required />
+              <input id="email" name="Email" type="email" required>
             </div>
             <div class="form-field">
               <label for="phone">Phone</label>
-              <input id="phone" name="Phone" type="tel" />
+              <input id="phone" name="Phone" type="tel">
             </div>
             <div class="form-field">
               <label for="subject">Subject</label>
-              <input id="subject" name="Subject" type="text" required />
-            </div>
-            <div class="form-field">
-              <label for="message">Message</label>
-              <textarea id="message" name="Message" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn primary full">Send via email</button>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer" role="contentinfo">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <strong>JAHCARE SERVICES — Caring Connection • Supports with Love</strong>
-        <span>© <span id="year"></span> JAHCARE SERVICES</span>
-      </div>
-      <div class="footer-contact">
-        <span><strong>Contact</strong></span>
-        <span>ABN 354 6470 0601</span>
-        <a href="mailto:jahcareservices@gmail.com">jahcareservices@gmail.com</a>
-        <a href="tel:+61421507762">+61 421 507 762</a>
-      </div>
-      <div class="footer-ack">
-        <span><strong>Acknowledgement of Country</strong></span>
-        <span>We acknowledge the Traditional Owners of Country across Western Australia and pay our respects to Elders past and present.</span>
-      </div>
-      <div class="footer-cta">
-        <a class="btn small" href="#team">Meet Our Team</a>
-        <a class="btn small" href="#mission">Our Mission</a>
-        <a class="btn small" href="#contact">Get in Touch</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/main.js" defer></script>
-</body>
-</html>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact">
-      <div class="container contact-grid">
-        <header class="section-header">
-          <h2>Get in Touch</h2>
-          <p class="lead">JAHCARE SERVICES — Caring Connection • Supports with Love</p>
-        </header>
-        <div class="contact-card details">
-          <ul>
-            <li><strong>JAHCARE SERVICES — Caring Connection • Supports with Love</strong></li>
-            <li>ABN 354 6470 0601 — Founder: J. Huriwai-Kahuroa</li>
-            <li>📞 <a href="tel:+61421507762">0421 507 762</a> or <a href="tel:+61498560998">0498 560 998</a></li>
-            <li>✉️ <a href="mailto:jahcareservices@gmail.com">jahcareservices@gmail.com</a></li>
-            <li>Service area: Pilbara–Perth, Western Australia</li>
-          </ul>
-        </div>
-        <div class="contact-card form-card">
-          <form action="mailto:jahcareservices@gmail.com" method="post" enctype="text/plain">
-            <div class="form-field">
-              <label for="name">Name</label>
-              <input id="name" name="Name" type="text" required />
-            </div>
-            <div class="form-field">
-              <label for="email">Email</label>
-              <input id="email" name="Email" type="email" required />
-            </div>
-            <div class="form-field">
-              <label for="phone">Phone</label>
-              <input id="phone" name="Phone" type="tel" />
-            </div>
-            <div class="form-field">
-              <label for="subject">Subject</label>
-              <input id="subject" name="Subject" type="text" required />
+              <input id="subject" name="Subject" type="text" required>
             </div>
             <div class="form-field">
               <label for="message">Message</label>
