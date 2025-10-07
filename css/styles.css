@@ -364,55 +364,6 @@ img {
   font-weight: 600;
 }
 
-.key-characteristics {
-  margin-top: 2rem;
-}
-
-.key-characteristics ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 0.75rem;
-}
-
-.key-characteristics li {
-  padding: 0.7rem 1rem;
-  border-radius: var(--radius-md);
-  background: rgba(31, 92, 83, 0.08);
-  font-weight: 600;
-}
-
-.timeline {
-  counter-reset: step;
-  list-style: none;
-  padding: 0;
-  margin: 2rem 0 0;
-  display: grid;
-  gap: 1.5rem;
-}
-
-.timeline li {
-  position: relative;
-  padding-left: 3.25rem;
-}
-
-.timeline li::before {
-  counter-increment: step;
-  content: counter(step);
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 2.25rem;
-  height: 2.25rem;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-tertiary), var(--color-secondary));
-  color: #fff;
-  font-weight: 700;
-}
-
 .team-grid {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
